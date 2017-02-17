@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cust="clr-namespace:GRCustom.View;assembly=GRCustom"
+             xmlns:local="clr-namespace:GRLab.Page"
+             x:Class="GRLab.Page.GRListViewPage">
+    <StackLayout>
+        <cust:GRListView  x:TypeArguments="local:Item"  x:Name="listview" RowHeight="300">
+            <cust:GRListView.ItemTemplate>
+                <DataTemplate>
+                   <ViewCell>
+                     <Grid>
+                         <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                         </Grid.RowDefinitions>
+                            <Image Grid.Row="0" Aspect="AspectFill"                              
+                                Source="{Binding Source}">
+                            </Image>
+                     </Grid>
+                   </ViewCell>
+                </DataTemplate>
+            </cust:GRListView.ItemTemplate>
+        </cust:GRListView>
+    </StackLayout>
+</ContentPage>
